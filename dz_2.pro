@@ -1,7 +1,9 @@
 QT -= gui
+QT += testlib core
 
 CONFIG += c++11 console
 CONFIG -= app_bundle
+CONFIG += qt console warn_on depend_includepath testcase
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -9,8 +11,10 @@ CONFIG -= app_bundle
 
 SOURCES += \
     StringOperation/StringOperation.cpp \
+    StringOperationsTest.cpp \
     main.cpp
     StringOperation/StringOperations.h
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
